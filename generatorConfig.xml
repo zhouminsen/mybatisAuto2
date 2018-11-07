@@ -102,7 +102,7 @@
             <!-- 重写列名 -->
             <!-- <columnOverride column="ParamName" property="ParamName"/> -->
         </table>
-     <table tableName="tb_sensor" domainObjectName="SensorPojo"
+        <table tableName="tb_sensor" domainObjectName="SensorPojo"
                mapperName="SensorPojoMapper"
                enableDeleteByExample="false"
                enableUpdateByExample="false" selectByExampleQueryId="false"
@@ -124,6 +124,16 @@
         </table>
         <table tableName="tb_temperature_sampling" domainObjectName="TemperatureSamplingPojo"
                mapperName="TemperatureSamplingPojoMapper"
+               enableDeleteByExample="false"
+               enableUpdateByExample="false" selectByExampleQueryId="false"
+               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
+            <!-- 字段驼峰命名 -->
+            <property name="useActualColumnNames" value="false"/>
+            <!-- 重写列名 -->
+            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
+        </table>
+        <table tableName="tb_map_vid_sensorinfo" domainObjectName="MapVidSensorinfoPojo"
+               mapperName="MapVidSensorinfoPojoMapper"
                enableDeleteByExample="false"
                enableUpdateByExample="false" selectByExampleQueryId="false"
                selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
