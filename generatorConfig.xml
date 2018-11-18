@@ -142,7 +142,6 @@
             <!-- 重写列名 -->
             <!-- <columnOverride column="ParamName" property="ParamName"/> -->
         </table>
-
         <table tableName="tb_temperature_info" domainObjectName="TemperatureInfoPojo"
                mapperName="TemperatureInfoPojoMapper"
                enableDeleteByExample="false"
@@ -154,17 +153,7 @@
             <!-- <columnOverride column="ParamName" property="ParamName"/> -->
         </table>
         <table tableName="tb_menu" domainObjectName="MenuPojo"
-               mapperName="MenuPojoPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_map_user_menu" domainObjectName="MapUserMenuPojo"
-               mapperName="MapUserMenuPojoMapper"
+               mapperName="MenuMapper"
                enableDeleteByExample="false"
                enableUpdateByExample="false" selectByExampleQueryId="false"
                selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
