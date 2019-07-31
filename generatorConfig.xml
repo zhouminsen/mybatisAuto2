@@ -13,18 +13,18 @@
         <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
         <!-- oracle -->
 
-        <!--   <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
-                           connectionURL="jdbc:oracle:thin:@172.16.36.132:1521/YCAPP_D"
-                           userId="AGENT" password="AGENT">
-               &lt;!&ndash; 读取数据库备注信息必要属性，不加注释会为null &ndash;&gt;
-               <property name="remarksReporting" value="true"></property>
-           </jdbcConnection>
-   -->
+        <!--<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@//172.16.36.23:1521/NEWFO"
+                        userId="YCGCE" password="YCGCE">
+            &lt;!&ndash; 读取数据库备注信息必要属性，不加注释会为null &ndash;&gt;
+            <property name="remarksReporting" value="true"></property>
+        </jdbcConnection>-->
+
         <!-- mysql -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/toolchain" userId="root"
-                        password="root">
-        </jdbcConnection>
+         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                         connectionURL="jdbc:mysql://127.0.0.1:3306/web" userId="root"
+                         password="root">
+         </jdbcConnection>
         <!-- sqlserver -->
         <!-- <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
             connectionURL="jdbc:sqlserver://172.28.70.45;DatabaseName=DevOP"
@@ -62,8 +62,8 @@
         </javaClientGenerator>
 
         <!-- 如若想生成example    把 enableCountByExample="false" enableSelectByExample="false"删除即可 指定用户schema="YCPAY"-->
-        <table tableName="tb_cold_order_logistics" domainObjectName="ColdOrderLogisticsPojo"
-               mapperName="ColdOrderLogisticsPojoMapper"
+        <table tableName="user" domainObjectName="user"
+               mapperName="userDao"
                enableDeleteByExample="false"
                enableUpdateByExample="false" selectByExampleQueryId="false"
                selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
@@ -72,95 +72,6 @@
             <!-- 重写列名 -->
             <!-- <columnOverride column="ParamName" property="ParamName"/> -->
         </table>
-        <table tableName="tb_cold_order_recipient" domainObjectName="ColdOrderRecipientPojo"
-               mapperName="ColdOrderRecipientPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_cold_order_status" domainObjectName="ColdOrderStatusPojo"
-               mapperName="ColdOrderStatusPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_cold_order" domainObjectName="ColdOrderPojo"
-               mapperName="ColdOrderPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_sensor" domainObjectName="SensorPojo"
-               mapperName="SensorPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_sensor_info" domainObjectName="SensorInfoPojo"
-               mapperName="SensorInfoPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_temperature_sampling" domainObjectName="TemperatureSamplingPojo"
-               mapperName="TemperatureSamplingPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_map_vid_sensorinfo" domainObjectName="MapVidSensorinfoPojo"
-               mapperName="MapVidSensorinfoPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_temperature_info" domainObjectName="TemperatureInfoPojo"
-               mapperName="TemperatureInfoPojoMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
-        <table tableName="tb_menu" domainObjectName="MenuPojo"
-               mapperName="MenuMapper"
-               enableDeleteByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"
-               selectByPrimaryKeyQueryId="false" enableCountByExample="false" enableSelectByExample="false">
-            <!-- 字段驼峰命名 -->
-            <property name="useActualColumnNames" value="false"/>
-            <!-- 重写列名 -->
-            <!-- <columnOverride column="ParamName" property="ParamName"/> -->
-        </table>
+
     </context>
 </generatorConfiguration>
